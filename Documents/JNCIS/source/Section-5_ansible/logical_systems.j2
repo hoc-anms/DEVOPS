@@ -1,0 +1,17 @@
+logical-systems { {% for system in systems %}
+    {{ system }} {
+        routing-options {
+            autonomous-system {{ systems[system].asn }};
+        }
+        protocols { {% if systems[system].ibgp %}
+            bgp {
+                group ibgp {
+                    type internal; {% for neighbour in systems[system].ibgp %}
+                    neighbor {{ neighbour.ip }} { 
+                        description {{ neighbour.router|upper }}; 
+                    } {% endfor %}
+                }
+            } {% endif %}
+        }
+    } {% endfor %}
+}

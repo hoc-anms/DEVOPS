@@ -1,0 +1,7 @@
+hosts:
+  - device: '172.12.1.2'
+    username: netconf
+    passwd: netconf123
+tests:
+  - ./Section-3_JSNAPy/check_sw_ver.yml
+  - ./Section-3_JSNAPy/check_bgp_nei.yml

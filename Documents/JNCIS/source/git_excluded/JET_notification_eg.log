@@ -1,0 +1,14 @@
+INFO:jnpr.jet.JetHandler:Connecting to JET notification server
+ERROR:jnpr.jet.JetHandler:Could not connect to the JET notification server
+INFO:jnpr.jet.JetHandler:Connecting to JET notification server
+INFO:jnpr.jet.notification.NotificationTopic:Successfully appended the topic /junos/events/kernel/interfaces/ifd/+/ge-0/0/0
+INFO:jnpr.jet.notification.NotificationTopic:Successfully appended the topic /junos/events/kernel/interfaces/ifl/+/lt-0/0/0.11
+INFO:jnpr.jet.notification.NotificationTopic:Successfully appended the topic /junos/events/kernel/interfaces/ifa/delete/+/+/+/+/#
+INFO:jnpr.jet.notification.NotificationTopic:Successfully appended the topic /junos/events/kernel/interfaces/iff/change/+/+/+/+
+INFO:jnpr.jet.notification.NotificationTopic:Successfully appended the topic /junos/events/kernel/route-table/+/+/#
+INFO:jnpr.jet.notification.NotificationTopic:Successfully appended the topic /junos/events/kernel/route/+/+/+/#
+INFO:jnpr.jet.notification.NotificationHandler:Successfully subscribed to event:/junos/events/kernel/interfaces/ifd/+/ge-0/0/0
+INFO:jnpr.jet.notification.NotificationHandler:Successfully subscribed to event:/junos/events/kernel/interfaces/ifl/+/lt-0/0/0.11
+INFO:jnpr.jet.notification.NotificationHandler:Successfully subscribed to event:/junos/events/kernel/interfaces/ifa/delete/+/+/+/+/#
+INFO:jnpr.jet.notification.NotificationHandler:Successfully subscribed to event:/junos/events/kernel/route-table/+/+/#
+INFO:jnpr.jet.notification.NotificationHandler:Successfully subscribed to event:/junos/events/kernel/route/+/+/+/#

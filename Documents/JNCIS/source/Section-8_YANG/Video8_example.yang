@@ -1,0 +1,33 @@
+module junos-conf-system {
+   namespace "http://yang.juniper.net/junos/conf/system";
+   prefix jc-system;
+ container system {
+    leaf host-name {
+       description "Hostname for this router";
+       type string {
+         length "1 .. 255";
+       }
+    }
+    leaf-list domain-search {
+       description "List of domain names to search";
+       type string;
+    }
+    list name-server {
+       key name;
+       description "DNS name servers";
+       uses nameserver-object;
+    }
+    leaf-list authentication-order {
+       type enumeration {
+            enum "radius" {
+                description "Remote Authentication Dial-In User Service";
+            }   
+            enum "tacplus" {
+                description "TACACS+ authentication services";
+            }
+            enum "password" {
+                description "Traditional password authentication";
+            }
+        }
+    }
+ }

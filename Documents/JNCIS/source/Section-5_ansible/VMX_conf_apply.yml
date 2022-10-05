@@ -1,0 +1,21 @@
+---
+- name: Push Jinja2 Template Config
+  roles:
+    - Juniper.junos
+  hosts: VMX 
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: Push Config
+      juniper_junos_config:
+        load: replace
+        timeout: 600
+        config_mode: exclusive
+        format: text
+        template: logical_systems.j2 
+        vars: "{{ variables }}"
+        comment: "New NTP config, pushed from Ansible"
+      register: response
+    - name: Print Commit Action
+      debug:
+        msg: "{{ response }}"

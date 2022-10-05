@@ -1,0 +1,9 @@
+---
+test_sw_version:
+  - command: show version
+  - item: 
+      xpath: '//software-information/package-information'
+      tests:
+        - all-same: comment
+          err: "Test failed. <{{pre['comment']}}> not equal to <{{post['comment']}}>"
+          info: "Success, versions are equal"

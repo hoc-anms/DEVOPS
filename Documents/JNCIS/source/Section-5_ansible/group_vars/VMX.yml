@@ -1,0 +1,9 @@
+variables:
+  systems:
+    RTR1:
+      asn: 65534
+      ibgp:
+      - {ip: 192.168.1.2, router: rtr2}
+      - {ip: 192.168.1.3, router: rtr3}
+      - {ip: 192.168.1.5, router: rtr6}
+      - {ip: 192.168.1.6, router: rtr7}

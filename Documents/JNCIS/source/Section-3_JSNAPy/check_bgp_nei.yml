@@ -1,0 +1,8 @@
+---
+test_bgp_nei:
+  - rpc: get-bgp-neighbor-information
+  - iterate:
+      xpath: '//bgp-information/bgp-peer'
+      tests:
+        - is-equal: peer-state, Established     
+          err: "BGP neighbour issue detected. {{pre['peer-address']}}. State was: {{pre['peer-state']}}. Now state is {{post['peer-state']}}"
